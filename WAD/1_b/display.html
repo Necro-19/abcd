@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Information</title>
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+  <div class="container">
+    <h2>User Information</h2>
+    <div class="card-container">
+      <div class="card name"></div>
+      <div class="card email"></div>
+      <div class="card password"></div>
+    </div>
+  </div>
+  <script>
+    const userData = JSON.parse(localStorage.getItem('userData'));
+
+    document.querySelector('.name').innerHTML = `<strong>Name:</strong> ${userData.username}`;
+    document.querySelector('.email').innerHTML = `<strong>Email:</strong> ${userData.email}`;
+    document.querySelector('.password').innerHTML = `<strong>Password:</strong> ${userData.password}`;
+  </script>
+</body>
+
+</html>
